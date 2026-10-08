@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap');
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5f0e8;
+    color: #2d2925;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    padding: 30px 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 100;
+}
+
+.logo {
+    color: #2d2925;
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    letter-spacing: 3px;
+}
+
+.nav {
+    display: flex;
+    gap: 35px;
+}
+
+.nav a {
+    position: relative;
+
+    color: #2d2925;
+    text-decoration: none;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 1px;
+
+    background: #2d2925;
+
+    transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    padding: 160px 8% 100px;
+
+    display: flex;
+    align-items: center;
+
+    background: #e7d9c9;
+}
+
+.hero-content {
+    max-width: 1000px;
+}
+
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: 3px;
+
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(70px, 11vw, 155px);
+
+    font-weight: 400;
+
+    line-height: 0.87;
+
+    letter-spacing: -6px;
+}
+
+.hero-link {
+    display: inline-block;
+
+    margin-top: 60px;
+
+    color: #2d2925;
+    text-decoration: none;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    border-bottom: 1px solid #2d2925;
+
+    padding-bottom: 9px;
+
+    transition: opacity 0.3s ease;
+}
+
+.hero-link:hover {
+    opacity: 0.5;
+}
+
+
+/* =========================
+   WORK
+========================= */
+
+.work {
+    padding: 160px 7%;
+}
+
+.section-heading {
+    margin-bottom: 110px;
+}
+
+.section-heading p {
+    font-size: 10px;
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(45px, 6vw, 75px);
+
+    font-weight: 400;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects {
+    display: flex;
+    flex-direction: column;
+
+    gap: 140px;
+}
+
+.project {
+    width: 100%;
+}
+
+.project-small {
+    width: 72%;
+    margin-left: auto;
+}
+
+.project-image {
+    .project-image img {
+   .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.8s ease;
+}
+
+.project:hover .project-image img {
+    transform: scale(1.035);
+}
+
+.placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #cdbba8;
+
+    color: #5c4d40;
+
+    font-size: 11px;
+    letter-spacing: 6px;
+
+    transition: transform 0.8s ease;
+}
+
+.project:hover .placeholder {
+    transform: scale(1.035);
+}
+
+.project-info {
+    display: grid;
+
+    grid-template-columns: 60px 1fr 1fr;
+
+    align-items: center;
+
+    padding: 20px 0;
+
+    border-top: 1px solid #b8a99a;
+}
+
+.project-info span {
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.project-info h3 {
+    font-size: 12px;
+
+    font-weight: 400;
+
+    letter-spacing: 3px;
+}
+
+.project-info p {
+    font-size: 10px;
+
+    text-align: right;
+
+    color: #6d6259;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    padding: 170px 8%;
+
+    background: #ded0c0;
+}
+
+.about h2 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(50px, 7vw, 100px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    margin-bottom: 110px;
+}
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns: 1.4fr 1fr;
+
+    gap: 15%;
+}
+
+.about-description {
+    max-width: 600px;
+}
+
+.about-description p {
+    font-size: 14px;
+
+    line-height: 2;
+
+    margin-bottom: 25px;
+}
+
+.about-details {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 30px;
+}
+.about-details div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.about-details span {
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #75695f;
+}
+
+.about-details strong {
+    font-size: 11px;
+
+    font-weight: 400;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    padding: 180px 8%;
+}
+
+.contact h2 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(55px, 8vw, 115px);
+
+    font-weight: 400;
+
+    line-height: 0.9;
+
+    margin-bottom: 110px;
+}
+
+.contact-bottom {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #b8a99a;
+}
+
+.contact-bottom p {
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+.contact-bottom a {
+    color: #2d2925;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    transition: opacity 0.3s ease;
+}
+
+.contact-bottom a:hover {
+    opacity: 0.5;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 30px 5%;
+
+    background: #2d2925;
+
+    color: #f5f0e8;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 22px 5%;
+    }
+
+    .nav {
+        gap: 15px;
+    }
+
+    .nav a {
+        font-size: 8px;
+    }
+
+    .hero {
+        padding: 140px 6% 80px;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+        letter-spacing: -3px;
+    }
+
+    .work {
+        padding: 100px 6%;
+    }
+
+    .section-heading {
+        margin-bottom: 70px;
+    }
+
+    .project-small {
+        width: 100%;
+    }
+
+    .projects {
+        gap: 90px;
+    }
+
+    .project-image {
+        height: 450px;
+    }
+
+    .project-info {
+        grid-template-columns: 35px 1fr;
+        gap: 10px;
+    }
+
+    .project-info p {
+        grid-column: 2;
+        text-align: left;
+    }
+
+    .about {
+        padding: 110px 6%;
+    }
+
+    .about h2 {
+        margin-bottom: 70px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .contact {
+        padding: 120px 6%;
+    }
+
+    .contact h2 {
+        margin-bottom: 80px;
+    }
+
+    .contact-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+}
+.hero-content {
+    opacity: 0;
+    transform: translateY(120px);
+    animation: heroEnter 4s ease-out forwards;
+}
+
+@keyframes heroEnter {
+    from {
+        opacity: 0;
+        transform: translateY(120px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.section-top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 18px;
+    margin-bottom: 90px;
+    border-bottom: 1px solid #8f8174;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+.about-title {
+    padding-bottom: 80px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid #8f8174;
+}
+
+.detail-item {
+    padding: 25px 0;
+    border-bottom: 1px solid #8f8174;
+}
+
+.detail-item span {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    color: #75695f;
+}
+
+.detail-item strong {
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.about {
+    border: 10px solid red !important;
+}
